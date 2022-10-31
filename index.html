@@ -5,8 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    
+    <iframe src="./toubu/头部.html" frameborder="0" class="if"></iframe>
+
+     <div class="tou">
+        <div class="tou_1">
+            <div>
+                <p class="p1">幻响小贝HiFi2.1音箱</p>
+            </div>
+             <div>
+                <p class="p2">
+                    <span id="sp1">126</span>人申请
+                </p>
+                <p class="p3">
+                    <span>￥599</span>
+                </p>
+                <p class="p4">
+                    <span id="sp2">20</span>台
+                </p>
+             </div>
+             <div id="djs">
+                   
+             </div>
+             <div>
+                <button id="but">点击申请</button>
+             </div>
+        </div>
+     </div>
+
+    <iframe src="./dibu/底部.html" frameborder="0" class="iff"></iframe>
 </body>
 </html>
+
+<script>
+    var djs=document.getElementById('djs');
+
+    setInterval(function(){
+
+var str=new Date();
+
+var num=new Date(2022,10,11);
+
+var time_=num-str;
+
+var date=Math.floor(time_ / 1000/ 60/ 60/ 24);
+date=date<10?'0'+date:date;
+var hours=Math.floor(time_ / 1000/ 60 /60%24);
+hours=hours<10?'0'+hours:hours;
+var minutes=Math.floor(time_ / 1000/ 60%60);
+minutes=minutes<10?'0'+minutes:minutes;
+var seconds=Math.floor(time_ /1000%60);
+seconds=seconds<10?'0'+seconds:seconds;
+djs.innerHTML='距离11月11还有'+date+'天'+hours+'时'+minutes+'分'+seconds+'秒';
+
+  
+},1000)
+
+var but=document.getElementById('but');
+var sp1=document.getElementById('sp1');
+var sp2=document.getElementById('sp2');
+
+var num1=126;
+var num2=20;
+but.onclick=function(){
+    
+  sp1.innerHTML=num1++;
+  sp2.innerHTML=num2--;
+  if(num2<=0){
+        num2=0;
+        num1=146;
+  }
+}
+</script>

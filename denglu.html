@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/denglu.css">
 </head>
 <body>
-    
+    <iframe src="./toubu/头部.html" frameborder="0" class="if"></iframe>
+    <div class="deng">
+          <div class="imm">
+            <img src="./img/logonew.png" alt="">
+          </div>
+          <div class="dd">
+                <div>
+                     <input type="text" name="" id="inn1" placeholder="请输入手机号">
+                </div>
+                <div>
+                    <input type="password" name="" id="inn2" placeholder="请输入密码">
+                </div>
+                <div>
+                    记住密码<input type="checkbox" name="" id="inn3">
+                    <a href="#">点击查看</a>
+                </div>
+                <div>
+                    <button id="inn4">点击登录</button>
+                </div>
+          </div>
+    </div>
+    <iframe src="./dibu/底部.html" frameborder="0" class="iff"></iframe>
 </body>
 </html>
+
+<script src="./yinyong/myCookie.js"></script>
+
+<script>
+    var inn1=document.getElementById('inn1');
+    var inn2=document.getElementById('inn2');
+    var inn3=document.getElementById('inn3');
+    inn4.onclick=function(){
+        console.log(inn1.value);
+        if(inn1.value== getCookie('手机号')&&inn2.value==getCookie('密码')){
+            window.location.href='./index.html';
+        }else{
+            alert('输入错误');
+        }
+    }
+</script>
