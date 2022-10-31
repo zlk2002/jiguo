@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            background-color:#FFFFFF;
+            box-shadow: 2px 2px 2px 2px rgb(219, 216, 216);
+            display: flex;
+        }
+        /* logobu部分 */
+        .headerlog{
+            margin-left: 260px;
+            margin-top: 13px;
+        }
+        .headerlog>img{
+            width: 120px;
+            height: 50px;
+        }
+        /*图片右边部分  */
+        .headerright{
+         display: flex;
+          margin-top: 30px;
+        }
+        .headerright>li{
+              margin-left: 65px;
+        }
+        .headerright>li>a:hover{
+            color: red;
+        }
+        .headerright>li:nth-of-type(1)>a{
+         color: red;
+        }
+        .headerright>li:nth-of-type(6){
+         margin-left: 310px;
+         transition: all 1s;
+        }
+        .headerright>li:nth-of-type(6):hover>img{
+   transform: scale(1.2);
+        }
+        .headerright>li:nth-of-type(7)>a{
+            color: red;
+            font-size: 17px;
+            
+        }
+        .headerright>li:nth-of-type(7){
+         margin-left: 30px;
+         width: 45px;
+         height: 25px;
+         border: 1px solid red;
+         text-indent: 6px;
+        }
+        .headerright>li:nth-of-type(7):hover{
+        background-color: red;
+        
+        }
+        .headerright>li:nth-of-type(7):hover>a{
+            color: white;
+        }
+        .headerright>li>a{
+            color: #5A5946;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        /* 文字总体部分 */
+        .individua{
+            height: 940px;
+            width: 1000px;
+            display: flex;
+            margin-top: 50px;
+            margin-left: 260px;
+            /* background-color: yellow; */
+        }
+        .individualift{
+            flex: 1;
+            background-color: #F3F3F3;
+            height: 340px;
+        }
+        .individuaright{
+            flex: 2.3;
+            background-color: #F3F3F3;
+            margin-left: 40px;
+        }
+        .individualift>p:nth-of-type(1){
+            color: #444444;
+            font-size: 20px;
+            font-weight: 600;
+           
+            width: 80%;
+            margin-top: 40px;
+            margin-left: 40px;
+
+        }
+        .individualift>p:nth-of-type(2){
+             border-bottom: 1px solid gray;
+             width: 80%;
+             margin-top: 10px;
+             margin-left: 20px;
+        }
+        .individualift>ul{
+            margin-left: 40px;
+        }
+        .individualift>ul>li{
+            margin-left: 14px;
+            margin-top: 5px;
+        }
+        .individualift>ul>li:nth-of-type(1){
+            color: #444444;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 20px;
+           margin-left: 0px;
+        }
+        .individualift>ul>li:nth-of-type(5){
+            color: #444444;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 20px;
+           margin-left: 0px;
+        }
+        /* 右边 */
+        .individuaright>p:nth-of-type(1){
+            color: #444444;
+            font-size: 20px;
+            font-weight: 600;
+            width: 80%;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+        .individuaright>p:nth-of-type(2){
+             border-bottom: 1px solid gray;
+             width: 90%;
+             margin-top: 10px;
+             margin-left: 20px;
+        }
+        .individuaright>ul{
+            margin-left: 40px;
+        }
+        .individuaright>ul>li{
+            margin-top: 5px;
+        }
+        .individuaright>ul>li:nth-of-type(1){
+            color: #444444;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 32px;
+           margin-left: 0px;
+        }
+        .individuaright>ul>li:nth-of-type(2){
+            margin-top: 30px;
+        }
+        .individuaright>ul>li:nth-of-type(10){
+            color: #444444;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 60px;
+           margin-left: 0px;
+        }
+        .individuaright>ul>li:nth-of-type(11){
+            margin-top: 20px;
+        }
+        .individuaright>ul>li:nth-of-type(18){
+            color: #444444;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 60px;
+           margin-left: 0px;
+        }
+        .individuaright>ul>li:nth-of-type(19){
+            
+            margin-top: 30px;
+           
+        }
+        /* 底部部分 */
+        .foot{
+    width: 100%;
+    height: 400px;
+    background-color: #505050;
+    display: flex;
+    margin-top: 30px;
+   }
+   .img{
+    margin-left: 260px;
+    margin-top: 35px;
+   }
+   .img>img{
+    width: 160px;
+    height: 160px;
+   }
+   /* logo部分 */
+   .log{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #989494;
+   }
+   .log>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .log>li:nth-of-type(4){
+    margin-top: 20px;
+   }
+   /* 免费试用 */
+   .free{
+    margin-top: 33px;
+    margin-left: 25px;
+   }
+   .free>li:nth-of-type(1){
+    color: white;
+   }
+   .free>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .free>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 友情链接 */
+   .interlinkage{
+    margin-top: 33px;
+    margin-left: 45px;
+   }
+   .interlinkage>li:nth-of-type(1){
+    color: white;
+   }
+   .interlinkage>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .interlinkage>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 购买攻略 */
+  .purchase{
+    margin-top: 33px;
+    margin-left: 45px;
+  }
+  .purchase>li:nth-of-type(1){
+    color: white;
+   }
+   .purchase>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .purchase>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 厂商合作 */
+   .cooperation{
+    margin-top: 33px;
+    margin-left: 45px;
+  }
+  .cooperation>li:nth-of-type(1){
+    color: white;
+   }
+   .cooperation>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .cooperation>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- logo部分 -->
+    <div class="headerlog">
+        <img src="./img/logonew.png" alt="">
+    </div>
+    <!-- 图片右边部分 -->
+    <ul class="headerright">
+        <li><a href="">首页</a></li>
+        <li><a href="">酷玩</a></li>
+        <li><a href="">导购</a></li>
+        <li><a href="">试用</a></li>
+        <li><a href="">报告</a></li>
+        <li><img src="./img/search.png" alt=""></li>
+        <li><a href="">注册</a></li>
+    </ul>
+    </div>
+    <!-- 文字总体部分 -->
+    <div class="individua">
+        <!-- 左边部分 -->
+        <div class="individualift">
+       <p>帮助中心</p>
+       <p></p>
+       <ul>
+        <li>商务合作</li>
+        <li>关于极果</li>
+        <li>极果大事记</li>
+        <li>联系我们</li>
+        <li>免费试用</li>
+        <li>试用流程</li>
+        <li>如何提高成功率</li>
+       </ul>
+        </div>
+        <!-- 右边部分 -->
+        <div class="individuaright">
+            <p>免费试用</p>
+            <p></p>
+     <ul>
+       <li>试用流程</li>
+       <li>Step1：报名申请试用</li>
+       <li>Step2：筛选并公布试用名单</li>
+       <li>Step3：客服电话或短信通知试用者</li>
+       <li>Step4：收取押金后寄送产品和试用须知</li>
+       <li>Step5：用户收货并在朋友圈或微博晒单</li>
+       <li>Step6：试用并在规定时间上传体验报告</li>
+       <li>Step7：审核报告并确认产品是否回收</li>
+       <li>Step8：返还试用机，收货后退还押金</li>
+       <li>试用注意事项</li>
+       <li>1. 收到试用通知，2天不回复算弃权</li>
+       <li>2. 拒缴押金则取消试用资格</li>
+       <li>3. 试用机被人为损坏须赔偿 Beijing Mini Maker Faire，让更多的普通消费者通过丰富的</li>
+       <li>线下活动来亲身体验新硬件给生活带来的全新改变；</li>
+       <li>5. 30天内不得凭借拉票重复中签试用，以当月首次为准，不得调换，遇有重复则资格顺</li>
+       <li>延。</li>
+       <li>6. 客服妹妹QQ： 3287633427</li>
+       <li>如何提高申请成功率</li>
+       <li>1. 完善个人主页，展现专业性（请在手机端页面完善：m.jiguo.com）</li>
+       <li>2. 试用计划明确且有新意</li>
+       <li>3. 在社交网络或圈子里有大影响力</li>
+       <li>4. 使劲拉票，但禁止恶意刷票</li>
+       <li>5. 认真参与并转发极果的活动</li>
+       <li>BTW：极果不是福利社，给基友、男友、女友送礼物，献爱心以及完成小时候心愿神马的</li>
+       <li>一概不会通过哦～</li>
+     </ul>
+        </div>
+    </div>
+<!-- 底部 -->
+<div class="foot">
+    <!-- 照片部分 -->
+<div class="img">
+    <img src="./img/code.png" alt="">
+</div>
+   <!-- logo部分 -->
+   <ul class="log">
+    <li><img src="./img/logoImg.jpg" alt=""></li>
+    <li>全球酷玩试用导购平台</li>
+    <li>酷·新奇·好玩·品质</li>
+    <li>微信添加“JguoJguo”</li>
+    <li>获取我们的服务。</li>
+   </ul>
+   <!-- 免费试用 -->
+   <ul class="free">
+    <li> 免费试用</li>
+    <li> <a href="./mianfeishiyong.html"> 试用流程</a></li>
+    <li><a href="./mianfeishiyong.html"> 如何提高成功率</a></li>
+   </ul>
+   <!-- 友情链接 -->
+   <ul class="interlinkage">
+    <li>友情链接</li>
+    <li><a href="">智东西</a>&nbsp;&nbsp;&nbsp;<a href="">WEIBUSI</a></li>
+    <li><a href="">搜狐IT</a>&nbsp;&nbsp;&nbsp;<a href="">腾讯科技</a></li>
+    <li><a href="">搜狐数码</a>&nbsp;&nbsp;&nbsp;<a href="">凤凰科技</a></li>
+    <li><a href="">凤凰数码</a>&nbsp;&nbsp;&nbsp;<a href="">PConline</a></li>
+    <li><a href="">泡泡网</a>&nbsp;&nbsp;&nbsp;<a href="">3W咖啡</a></li>
+    <li><a href="">ZUK社区</a>&nbsp;&nbsp;&nbsp;<a href="">亿觅emie</a></li>
+    <li><a href="">极客公园</a>&nbsp;&nbsp;&nbsp;<a href="">易迅易启玩</a></li>
+    <li><a href="">果库</a>
+   </ul>
+   <!-- 购买攻略 -->
+   <ul class="purchase">
+    <li>购买攻略 </li>
+    <li><a href="">美亚海淘教程</a> </li>
+    <li> <a href="">日亚海淘教程</a></li>
+    <li> <a href="">海淘转运攻略</a></li>
+    <li><a href="">kickstarter 众筹购买攻略</a></li>
+    <li><a href="">indiegogo 众筹购买攻略</a></li>
+   </ul>
+   <!-- 厂商合作 -->
+   <ul class="cooperation">
+    <li>厂商合作</li>
+    <li><a href="./shangwuhezuo.html">关于极果</a></li>
+    <li><a href="./shangwuhezuo.html">联系我们</a></li>
+    <li><a href="./shangwuhezuo.html">商务合作：BD@jiguo.com</a></li>
+    <li><a href="./shangwuhezuo.html">CEO邮箱：CEO@jiguo.com</a></li>
+
+   </ul>
+<!--  -->
+</div>
+</body>
+</html>
