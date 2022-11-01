@@ -5,23 +5,41 @@ var jiazhong=document.getElementsByClassName('jiazaizhong')[0]
 // console.log(jiazhong)
 var drawing=document.getElementsByClassName('drawing')[0]
 var body=document.getElementsByTagName('body')[0]
-var xin =document.getElementsByClassName('xin')
-
 
 window.onload=function(){
+    
+ var xin =document.getElementsByClassName('xin')
+var index6=0
+for (let k=0;k<xin.length;k++){
+ xin[k].setAttribute('index',k)
+ xin[k].onclick=function(){
+     index6++
+     let index5=this.getAttribute('index');
+     console.log(index5)
+     if(index6%2==0){
+        xin[index5].style.backgroundImage="url(../img/xin.png)"
+      let xin1=  xin[index5].innerHTML
+         xin[index5].innerHTML=xin1-0+1
+     }else{
+        let xin2=  xin[index5].innerHTML
+        xin[index5].style.backgroundImage="url(../img/xinRedh.png)"
+         xin[index5].innerHTML=xin2-1
+     }
+ }
+} 
    fu()
-  
-
 }
 var arr=[]
 function fu(){
     $.ajax(
         {
-            url:'http://127.0.0.1:3000/play/hot',
+            url:'http://127.0.0.1:3000/play/new',
             type:'get',
             dataType:'json',
              success:function(res){
               arr=res
+            //   console.log(arr)
+           
             },
             error:function(){
                 console.log('出错')
@@ -33,13 +51,13 @@ var index=0
 var flg=true
 
 function fn(){ 
+    
     jiazai.innerHTML='数据加载中'
     jiazai.style.backgroundImage="url(../img/loading-icon.gif)"
     setTimeout(function(){
         jiazai.innerHTML='点击加载更多'
         jiazai.style.backgroundImage="url(../img/more.png)"
         if(flg){ 
-           
             index++
             if(index>=arr.length){ 
                 jiazai.innerHTML='数据加载完毕'
@@ -50,8 +68,9 @@ function fn(){
                jiazai.style.backgroundColor='yellow'
                 return flg =false
             } 
-            $.each(arr[index],function(index1,element){
-           console.log(arr.length)
+            for (var j=0;j<arr.length;j++){
+            for (var k=0;k<arr.length;k++){
+                console.log(arr[0].img)
                 var li_=document.createElement('li')
                 var img_=document.createElement('img')
                 img_.className='pic'
@@ -84,27 +103,11 @@ function fn(){
                 li_.appendChild(p_)
                 li_.appendChild(p_2)
                 drawing.appendChild(li_)
-            })
+            }
+            }
+           
         } 
     },1500)
-    
 }
-var xin =document.getElementsByClassName('xin')
-console.log(xin)
-var index6=0
-for (var k=0;k<xin.length;k++){
- xin[k].setAttribute('index',k)
- xin[k].onclick=function(){
-     index6++
-     var index5=this.getAttribute('index');
-  console.log(index5)
-     if(index6%2==0){
-        xin[index5].style.backgroundImage="url(../img/xin.png)"
-         xin[index5].innerHTML=3
-     }else{
-        xin[index5].style.backgroundImage="url(../img/xinRedh.png)"
-         xin[index5].innerHTML=2
-     }
- }
-}
+
 // setTimeout(fn,2500)
