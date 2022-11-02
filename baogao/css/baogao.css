@@ -1,0 +1,146 @@
+
+/* 引入头部 */
+#iframe {
+    width: 100%;
+  }
+  /* 引入尾部 */
+  #iframe-bo {
+    width: 100%;
+    height: 400px;
+  }
+  .top1{
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+  }
+  li{
+    list-style: none;
+  }
+  .top1>h1{
+    font-size: 45px;
+    font-weight: normal;
+    color: rgb(66, 66, 66);
+    padding: 30px 0px;
+  }
+  .top1>a{
+    width: 180px;
+    display: inline-block;
+    font-size: 23px;
+    color: gray;
+    padding-bottom: 20px;
+  }
+  section{
+    position: relative;
+    padding: 20px 200px;
+    /* width: 100%; */
+    background-color:rgba(212, 209, 209, 0.281);
+  }
+  section>ul{
+    width: 600px;
+  }
+  .banner{
+    padding-top: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .se-d1{
+    width: 598px;
+    height: 110px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    border: rgba(128, 128, 128, 0.438) solid 1px;
+    background-color: rgb(246,240,237);
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+  }
+  .sec{
+    width: 100%;
+    height:100%;
+  }
+  .se-d1>p{
+    font-size: 20px;
+    color: rgb(56, 55, 55);
+    text-indent: 30px;
+  }
+  .se-d1-1{
+    float: left;
+  }
+  .se-d1-1>span{
+    display: inline-block;
+  }
+  .se-d1-1>span:nth-of-type(1){
+    vertical-align: middle;
+    background: url(../../img/tx.jpg) no-repeat;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+  }
+  .se-d1-1>span:nth-of-type(2){
+    color: rgba(226, 21, 21, 0.801);
+  }
+  .se-d1-1>span:nth-of-type(3){
+    color: gray;
+  }
+  .se-d1-2{
+    float: right;
+    margin-right: 30px ;
+  }
+  .se-d1-2>span{
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 5px;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+  .se-d1-2>span:nth-of-type(1){
+    background: url(../../img/zan.png)no-repeat 0px 3px;
+  }
+  .se-d1-2>span:nth-of-type(2){
+    background: url(../../img/reply.png) no-repeat 0px 3px;
+  }
+  .li-1 :hover{
+    animation: opt 3s infinite alternate;
+  }
+  @keyframes opt{
+    0%{}
+    15%{opacity: .9;}
+    25%{opacity: .8;}
+    35%{opacity: .7;}
+    45%{opacity: .6;}
+    55%{opacity: .5;}
+    65%{opacity: .6;}
+    75%{opacity: .7;}
+    85%{opacity: .8;}
+    95%{opacity: .9;}
+    100%{opacity: 1;}
+  }
+
+  .li-2{
+    width: 598px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    padding: 20px 0px;
+    border: 1px solid rgba(128, 128, 128, 0.363);
+    text-align: center;
+  }
+  .li-2>a{
+    color: rgb(128, 128, 128);
+  }
+
+
+  aside{
+    width: 300px;
+    position: absolute;
+    right: 250px;
+    top: 20px;
+  }
+  aside h2{
+    font-weight: normal;
+    /* color: rgba(128, 128, 128, 0.425); */
+  }
+  aside h4{
+    font-size: 18px;
+  }
