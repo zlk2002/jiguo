@@ -406,6 +406,7 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .liss>li{
@@ -415,9 +416,12 @@
     border-radius: 10px;
     border: 1px solid gainsboro;
     background-color: aliceblue;
+    margin-top: 20px;
 }
 
 .liss>li>a>img{
+    width: 220px;
+    height: 130px;
     border-radius: 10px;
 }
 
@@ -476,11 +480,24 @@
     margin: 20px auto;
     /* background-color: aqua; */
     background: url(../img/more.png) no-repeat 0px 7px;
+    /* background: url(../img/loading-icon.gif) no-repeat 0px 7px; */
     padding-left: 20px;
     box-sizing: border-box;
     color: red;
 }
 
+
+.ding{
+    width: 50px;
+    height: 50px;
+    background-color: #c6c6c6;
+    border-radius: 5px;
+    background: url(../img/back.png) no-repeat #e8e8e8 center center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
 
 
 

@@ -56,7 +56,7 @@
     var in1=document.getElementById('inp1');
     var sp=document.getElementsByTagName('span');
     in1.onblur=function(){
-       var reg1=/^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
+        reg1=/^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
        if(in1.value==''){
         sp[0].innerHTML='不能为空';
         sp[0].className='sp';
@@ -125,7 +125,7 @@
      var in4=document.getElementById('inp4');
 
      in4.onblur=function(){
-        var reg2=/^\w+$/;
+         reg2=/^\w+$/;
         if(in4.value==''){
               sp[3].innerHTML='不能为空';
               sp[3].className='sp';
@@ -142,7 +142,7 @@
      var in5=document.getElementById('inp5');
 
      in5.onblur=function(){
-        var reg3=/^\w{6,8}$/;
+         reg3=/^\w{6,8}$/;
         if(in5.value==''){
               sp[4].innerHTML='不能为空';
               sp[4].className='sp';
@@ -175,8 +175,11 @@
      var in7=document.getElementById('inp7');
 
      in7.onclick=function(){
-        setCookie('手机号',in1.value);
+        if(reg1.test(in1.value)&&in2.value=='r2b7'&&in3.value==num&&reg2.test(in4.value)&&reg3.test(in5.value)&&in5.value==in6.value){
+              setCookie('手机号',in1.value);
         setCookie('密码',in5.value);
         window.location.href='./denglu.html';
+        }
+        
      }
 </script>

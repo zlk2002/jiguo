@@ -212,7 +212,7 @@
 
                 <ul class="list">
                     <li>
-                       <a href="#">
+                       <a href="./yincang01.html">
                         <img src="img/re1.jpg" width="220" height="130">
                         <div class="bg2">
                             <p class="name">空气净化器里面学问多得惊呆你，你选对了吗？</p>
@@ -342,7 +342,7 @@
                <div class="dg2">
                    <ul class="lis">
                        <li>
-                       <a href="#">
+                       <a href="./yincang02.html">
                         <img src="img/g1.jpg" width="220" height="130">
                         <div class="dg3">
                             <p class="name">花万元把蜗居秒变“豪宅”？这12件家具就能帮你办到</p>
@@ -516,7 +516,11 @@
                 点击加载更多
             </div>
         </div>
-         
+          
+
+        <div class="ding">
+             
+        </div>
 
         
 
@@ -597,24 +601,26 @@ var mySwiper = new Swiper ('.swiper', {
 //   var spp2=document.getElementById('spp2');
   var spp1=document.getElementsByClassName('spp1');
   var spp2=document.getElementsByClassName('spp2');
-  var num=0;
-  var sum=3;
+  
+//   var sum=3;
 
 
-    for(var i=0;i<spp1.length;i++){
+    for(var i=0;i<spp1.length;i++){ 
+       
         spp1[i].setAttribute('index',i);
         spp1[i].onclick=function(){
             var index=this.getAttribute('index');
-            num++;
+            // console.log();
+           num++;
 
 if(num%2!=0){
     spp1[index].style.background='url(./img/xinRedh.png) no-repeat 0px 7px';
 spp1[index].style.backgroundSize='10px 10px'
-sum++;
+spp1[index].innerHTML++;
 spp1[index].innerHTML=sum;
 }else if(num%2==0){
     spp1[index].style.background='url(./img/zan.png) no-repeat 0px 7px'; 
-    sum--;
+    spp1[index].innerHTML--;
     spp1[index].innerHTML=sum;
 } 
         }
@@ -630,11 +636,11 @@ spp1[index].innerHTML=sum;
 if(num%2!=0){
     spp2[inde].style.background='url(./img/xinRedh.png) no-repeat 0px 7px';
 spp2[inde].style.backgroundSize='10px 10px'
-sum++;
+spp2[inde].innerHTML++;
 spp2[inde].innerHTML=sum;
 }else if(num%2==0){
     spp2[inde].style.background='url(./img/zan.png) no-repeat 0px 7px'; 
-    sum--;
+    spp2[inde].innerHTML--;
     spp2[inde].innerHTML=sum;
 } 
         }
@@ -674,6 +680,199 @@ spp2[inde].innerHTML=sum;
 //     }
 //   }
 
+
+ var div_=document.getElementsByClassName('jia')[0];
+var arr=[];
+ div_.onclick=function(){
+      
+     div_.style.background='url(./img/loading-icon.gif) no-repeat 0px 3px';
+
+    var ajax_=new XMLHttpRequest()||new ActiveXObject('Microsoft.XMLHTTP');
+
+    ajax_.open('get','http://127.0.0.1:3000/play/new');
+
+    ajax_.send();
+
+    ajax_.onreadystatechange=function(){
+        if(ajax_.readyState==4){
+             if(ajax_.status==200){
+                arr=JSON.parse(ajax_.responseText)
+               setTimeout(function(){
+                user();
+               },1000)
+             }else{
+                console.log('加载错误');
+             }
+        }
+    }
+ }
+var kw=document.getElementsByClassName('kw4')[0];
+    
+var index=0;
+var flg=true;
+  function user(){
+    if(flg){
+          index++;
+
+          if(index>=arr.length){
+                div_.innerHTML='数据加载完毕';
+                div_.style.background='url(./img/more.png) no-repeat 0px 7px';
+                return flg=false;
+          }
+          
+       var ul_=document.createElement('ul');
+
+       ul_.className='liss';
+
+        for(var item of arr[index]){
+                 
+            var li_=document.createElement('li');
+            var a_=document.createElement('a');
+            var img_=document.createElement('img');
+            img_.src=item.img;
+            a_.appendChild(img_);
+            li_.appendChild(a_);
+            var div_1=document.createElement('div');
+            div_1.className='kw5';
+            var p_=document.createElement('p');
+            p_.innerHTML=item.text;
+            div_1.appendChild(p_);
+            var div_2=document.createElement('div');
+            div_2.className='kw6';
+            var span1=document.createElement('span');
+            span1.innerHTML=item.price;
+            div_2.appendChild(span1);
+            div_1.appendChild(div_2);
+            var div_3=document.createElement('div');
+            div_3.className='kw7';
+            var span2=document.createElement('span');
+            span2.className='spp1';
+            span2.innerHTML=item.like;
+            div_3.appendChild(span2);
+            var span3=document.createElement('span');
+            span3.className='spp2';
+            span3.innerHTML=item.words;
+            div_3.appendChild(span3);
+            div_1.appendChild(div_3);
+            li_.appendChild(div_1);
+            ul_.appendChild(li_);
+
+        }
+
+
+
+
+
+        if(ul_){
+           div_.style.background='url(./img/more.png) no-repeat 0px 7px';
+        }
+         
+      
+     kw.appendChild(ul_);
+
+
+     
+    for(var i=0;i<spp1.length;i++){
+        spp1[i].setAttribute('index',i);
+        spp1[i].onclick=function(){
+            var index=this.getAttribute('index');
+            console.log();
+            num++;
+
+if(num%2!=0){
+    spp1[index].style.background='url(./img/xinRedh.png) no-repeat 0px 7px';
+spp1[index].style.backgroundSize='10px 10px'
+sum++;
+spp1[index].innerHTML=sum;
+}else if(num%2==0){
+    spp1[index].style.background='url(./img/zan.png) no-repeat 0px 7px'; 
+    sum--;
+    spp1[index].innerHTML=sum;
+} 
+        }
+    }
+
+    for(var i=0;i<spp1.length;i++){
+        spp1[i].setAttribute('index',i);
+        spp1[i].onclick=function(){
+            var index=this.getAttribute('index');
+            // console.log();
+            num++;
+
+if(num%2!=0){
+    spp1[index].style.background='url(./img/xinRedh.png) no-repeat 0px 7px';
+spp1[index].style.backgroundSize='10px 10px'
+spp1[index].innerHTML++;
+spp1[index].innerHTML=sum;
+}else if(num%2==0){
+    spp1[index].style.background='url(./img/zan.png) no-repeat 0px 7px'; 
+    spp1[index].innerHTML--;
+    spp1[index].innerHTML=sum;
+} 
+        }
+    }
+
+    
+    for(var j=0;j<spp2.length;j++){
+        spp2[j].setAttribute('inde',j);
+        spp2[j].onclick=function(){
+            var inde=this.getAttribute('inde');
+            num++;
+
+if(num%2!=0){
+    spp2[inde].style.background='url(./img/xinRedh.png) no-repeat 0px 7px';
+spp2[inde].style.backgroundSize='10px 10px'
+spp2[inde].innerHTML++;
+spp2[inde].innerHTML=sum;
+}else if(num%2==0){
+    spp2[inde].style.background='url(./img/zan.png) no-repeat 0px 7px'; 
+    spp2[inde].innerHTML--;
+    spp2[inde].innerHTML=sum;
+} 
+        }
+    }
+
+
+
+    }
+  }
+
+ 
+
+
+
+  var ding=document.getElementsByClassName('ding')[0];
+
+  window.onscroll=function(){
+
+var  top=document.documentElement.scrollTop;
+
+var  client=document.documentElement.clientHeight;
+
+if(top>client){
+         ding.style.display='block';
+}else{
+    ding.style.display='none';
+}
+
+
+ding.onclick=function(){
+
+    var timer=setInterval(function(){
+
+        var top=document.documentElement.scrollTop;
+
+        fen=Math.floor(top/7);
+
+        document.documentElement.scrollTop=top-fen;
+
+        if(top<20){
+               clearInterval(timer);
+        }
+    },50)
+}
+  
+}
 
  
 </script>
