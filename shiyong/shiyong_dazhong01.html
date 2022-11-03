@@ -4,9 +4,564 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>全部</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            background-color:#FFFFFF;
+            box-shadow: 2px 2px 2px 2px rgb(219, 216, 216);
+            display: flex;
+        }
+        /* logobu部分 */
+        .headerlog{  
+            margin-left: 260px;
+            margin-top: 13px;
+        }
+        .headerlog>img{
+            width: 120px;
+            height: 50px;
+        }
+        /*图片右边部分  */
+        .headerright{
+         display: flex;
+          margin-top: 30px;
+        }
+        .headerright>li{
+              margin-left: 65px;
+        }
+        .headerright>li>a:hover{
+            color: red;
+        }
+        .headerright>li:nth-of-type(1)>a{
+         color: red;
+        }
+        .headerright>li:nth-of-type(6){
+         margin-left: 310px;
+         transition: all 1s;
+        }
+        .headerright>li:nth-of-type(6):hover>img{
+   transform: scale(1.2);
+        }
+        .headerright>li:nth-of-type(7)>a{
+            color: red;
+            font-size: 17px;
+            
+        }
+        .headerright>li:nth-of-type(7){
+         margin-left: 30px;
+         width: 45px;
+         height: 25px;
+         border: 1px solid red;
+         text-indent: 6px;
+        }
+        .headerright>li:nth-of-type(7):hover{
+        background-color: red;
+        
+        }
+        .headerright>li:nth-of-type(7):hover>a{
+            color: white;
+        }
+        .headerright>li>a{
+            color: #5A5946;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    </style>
+    
+    <style>
+        *{
+        margin: 0px;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        }
+        /* 底部 */
+   .foot{
+    width: 100%;
+    height: 400px;
+    background-color: #505050;
+    display: flex;
+   }
+   .img{
+    margin-left: 260px;
+    margin-top: 35px;
+   }
+   .img>img{
+    width: 160px;
+    height: 160px;
+   }
+   /* logo部分 */
+   .log{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #989494;
+   }
+   .log>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .log>li:nth-of-type(4){
+    margin-top: 20px;
+   }
+   /* 免费试用 */
+   .free{
+    margin-top: 33px;
+    margin-left: 25px;
+   }
+   .free>li:nth-of-type(1){
+    color: white;
+   }
+   .free>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .free>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 友情链接 */
+   .interlinkage{
+    margin-top: 33px;
+    margin-left: 45px;
+   }
+   .interlinkage>li:nth-of-type(1){
+    color: white;
+   }
+   .interlinkage>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .interlinkage>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 购买攻略 */
+  .purchase{
+    margin-top: 33px;
+    margin-left: 45px;
+  }
+  .purchase>li:nth-of-type(1){
+    color: white;
+   }
+   .purchase>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .purchase>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+   /* 厂商合作 */
+   .cooperation{
+    margin-top: 33px;
+    margin-left: 45px;
+  }
+  .cooperation>li:nth-of-type(1){
+    color: white;
+   }
+   .cooperation>li:nth-of-type(2){
+    margin-top: 30px;
+   }
+   .cooperation>li>a{
+    font-size: 12px;
+    color: #989494;
+   }
+    </style>
+    
+    <link rel="stylesheet" href="./css/shiyong.css">
 </head>
 <body>
+    <div class="header">
+        <!-- logo部分 -->
+    <div class="headerlog">
+        <img src="./../img/logonew.png" alt="">
+    </div>
+    <!-- 图片右边部分 -->
+    <ul class="headerright">
+        <li><a href="">首页</a></li>
+        <li><a href="">酷玩</a></li>
+        <li><a href="">导购</a></li>
+        <li><a href="../shiyong/shiyong_dazhong01.html">试用</a></li>
+        <li><a href="../baogao/baogao_zuire.html">报告</a></li>
+        <li><img src="./../img/search.png" alt=""></li>
+        <li><a href="">注册</a></li>
+    </ul>
+    </div>
+
+    <div class="t">
+        <h1>免费试用</h1>
+        <div class="t-1">
+            <a href="./shiyong_dazhong01.html" class="active" style="color:red; border-bottom: 5px solid red;">大众试用</a>
+            <a href="./shiyong_tiyanshi01.html">体验师专享</a>
+        </div>
+
+        <!-- <div class="t-2">
+            <div class="color"></div>
+            <div class="color color2"></div>
+        </div> -->
+    </div>
+
+    <section class="sec-t">
+        <div class="sec-t1">
+            <a href="./shiyong_dazhong01.html"style="color:black;">全部</a>
+            <a href="./shiyong_dazhong02.html">申请中</a>
+            <a href="./shiyong_dazhong03.html">试用中</a>
+            <a href="./shiyong_dazhong04.html">已结束</a>
+        </div>
+        <div class="section">
+            <div class="se-t1">
+                <ul class="se-t1-ul">
+
+                    <!-- 第一行 -->
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot5.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: 
+                                    <span>8</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot9.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot11.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot12.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <!-- 第二行 -->
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot1.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot2.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot3.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot4.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- 第三行 -->
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot5.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot6.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot7.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot10.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <!-- 第四行 -->
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot2.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot9.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot3.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="se-t1-li">
+                        <a href="" class="se-t1-li-a">
+                            <span class="se-span">首发</span>
+                            <img src="../img/hot5.jpg" alt="" class="tupic">
+                            <div class="se-div">
+                                <h2>巴慕达 The Toaster 烤面包机</h2>
+                                <p class="se-div-p1">
+                                    <span>2023</span>
+                                    <span>20台</span>
+                                </p>
+                                <p class="se-div-p2">
+                                    <span>1392</span>申请
+                                </p>
+                                <p class="se-div-p3">报告数量: &nbsp; 8</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="dianji" onclick="fn()">
+        点击加载更多
+    </div>
     
+    <!-- 底部 -->
+      <div class="foot">
+          <!-- 照片部分 -->
+      <div class="img">
+          <img src="./../img/code.png" alt="">
+      </div>
+         <!-- logo部分 -->
+         <ul class="log">
+          <li><img src="./../img/logoImg.jpg" alt=""></li>
+          <li>全球酷玩试用导购平台</li>
+          <li>酷·新奇·好玩·品质</li>
+          <li>微信添加“JguoJguo”</li>
+          <li>获取我们的服务。</li>
+         </ul>
+         <!-- 免费试用 -->
+         <ul class="free">
+          <li> 免费试用</li>
+          <li> <a href="./../mianfeishiyong.html"> 试用流程</a></li>
+          <li><a href="./../mianfeishiyong.html"> 如何提高成功率</a></li>
+         </ul>
+         <!-- 友情链接 -->
+         <ul class="interlinkage">
+          <li>友情链接</li>
+          <li><a href="">智东西</a>&nbsp;&nbsp;&nbsp;<a href="">WEIBUSI</a></li>
+          <li><a href="">搜狐IT</a>&nbsp;&nbsp;&nbsp;<a href="">腾讯科技</a></li>
+          <li><a href="">搜狐数码</a>&nbsp;&nbsp;&nbsp;<a href="">凤凰科技</a></li>
+          <li><a href="">凤凰数码</a>&nbsp;&nbsp;&nbsp;<a href="">PConline</a></li>
+          <li><a href="">泡泡网</a>&nbsp;&nbsp;&nbsp;<a href="">3W咖啡</a></li>
+          <li><a href="">ZUK社区</a>&nbsp;&nbsp;&nbsp;<a href="">亿觅emie</a></li>
+          <li><a href="">极客公园</a>&nbsp;&nbsp;&nbsp;<a href="">易迅易启玩</a></li>
+          <li><a href="">果库</a>
+         </ul>
+         <!-- 购买攻略 -->
+         <ul class="purchase">
+          <li>购买攻略 </li>
+          <li><a href="">美亚海淘教程</a> </li>
+          <li> <a href="">日亚海淘教程</a></li>
+          <li> <a href="">海淘转运攻略</a></li>
+          <li><a href="">kickstarter 众筹购买攻略</a></li>
+          <li><a href="">indiegogo 众筹购买攻略</a></li>
+         </ul>
+         <!-- 厂商合作 -->
+         <ul class="cooperation">
+          <li>厂商合作</li>
+          <li><a href="./../shangwuhezuo.html">关于极果</a></li>
+          <li><a href="./../shangwuhezuo.html">联系我们</a></li>
+          <li><a href="./../shangwuhezuo.html">商务合作：BD@jiguo.com</a></li>
+          <li><a href="./../shangwuhezuo.html">CEO邮箱：CEO@jiguo.com</a></li>
+  
+         </ul>
+      <!--  -->
+      </div>
 </body>
 </html>
+<script src="./../yinyong/jquery-3.6.1.js"></script>
+<script src="./js/shiyongdazhong.js"></script>
